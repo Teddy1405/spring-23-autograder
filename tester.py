@@ -187,8 +187,24 @@ def generate_test_suite_v2():
             "test_inher2",
             "test_inher1",
             "test_let",
+            # my tests
+            "test_static_field",
+            "test_set_field",
+            "test_simple_func",
+            "test_return_obj",
+            "test_return_null",
+            "test_void",
+            "test_nested_let",
+            "test_super",
+            "test_overload_func",
+            "test_linked_list"
         ],
-        ["test_incompat_return1", "test_let2", "test_inher1", "test_incompat_types2"],
+        [
+            "test_incompat_return1", "test_let2", "test_inher1", "test_incompat_types2",
+            "test_invalid_set", "test_return_null_void", "test_void_return",
+            "test_invalid_field", "test_func_call_bad_args", "test_dup_param",
+            "test_dup_local_var"
+        ],
     )
 
 
