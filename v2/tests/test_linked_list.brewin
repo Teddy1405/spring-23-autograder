@@ -1,0 +1,47 @@
+(class node
+    (field int val 0)
+    (field node next null)
+    (method void set_val ((int x))
+        (set val x)
+    )
+    (method void add_node ((node n))
+        (if (== next null)
+            (set next n)
+            (call next add_node n)
+        )
+    )
+    (method void print_list ()
+        (begin
+            (print val)
+            (if (== next null)
+                (return)
+                (call next print_list)
+            )
+        )
+    )
+)
+
+(class main
+    (field node list null)
+    (field node temp null)
+    (method void main ()
+        (begin
+            (set list (new node))
+            (call list set_val 3)
+            
+            (set temp (new node))
+            (call temp set_val 2)
+            (call list add_node temp)
+
+            (set temp (new node))
+            (call temp set_val 4)
+            (call list add_node temp)
+
+            (set temp (new node))
+            (call temp set_val 6)
+            (call list add_node temp)
+
+            (call list print_list)
+        )
+    )
+)
