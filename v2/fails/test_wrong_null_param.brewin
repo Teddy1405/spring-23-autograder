@@ -1,0 +1,23 @@
+(class person
+    (field int age 0)
+)
+
+(class dog
+    (field int treats 10)
+)
+
+(class main 
+    (field person p null)
+    (field dog d null)
+    (method void main ()
+        (begin
+            (call me foo (call me bark))
+        )
+    )
+    (method dog bark ()
+        (return d)
+    )
+    (method void foo ((person x))
+      (return)
+    )
+)

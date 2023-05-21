@@ -1,0 +1,21 @@
+(class animal
+    (field int age 0)
+)
+
+(class dog inherits animal
+    (field int treats 10)
+    (method animal get ()
+      (return super)
+    )
+)
+
+(class main 
+    (field animal p null)
+    (field dog d null)
+    (method void main ()
+        (begin
+            (set d (new dog))
+            (call d get)
+        )
+    )
+)
