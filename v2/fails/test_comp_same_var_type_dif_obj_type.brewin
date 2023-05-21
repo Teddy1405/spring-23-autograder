@@ -1,0 +1,31 @@
+(class animal
+    (field int age 0)
+)
+
+(class dog inherits animal
+    (field int treats 10)
+    (method animal get ()
+      (return (new animal))
+    )
+    (method void foo ()
+      (return null)
+    )
+)
+(class cat inherits animal
+  (field int lives 9)
+  (method void meow ()
+    (print "meow")
+  )
+)
+
+(class main 
+    (field animal p null)
+    (field animal d null)
+    (method void main ()
+        (begin
+            (set d (new dog))
+            (set p (new cat))
+            (print (== d p))
+        )
+    )
+)
