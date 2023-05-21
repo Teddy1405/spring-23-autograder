@@ -179,33 +179,47 @@ def generate_test_suite_v1():
 
 def generate_test_suite_v2():
     """wrapper for generate_test_suite for v2"""
-    return __generate_test_suite(
-        2,
-        [
-            "test_compare_null",
-            "test_return_default1",
-            "test_inher2",
-            "test_inher1",
-            "test_let",
-            # my tests
-            "test_static_field",
-            "test_set_field",
-            "test_simple_func",
-            "test_return_obj",
-            "test_return_null",
-            "test_void",
-            "test_nested_let",
-            "test_super",
-            "test_overload_func",
-            "test_linked_list"
-        ],
-        [
-            "test_incompat_return1", "test_let2", "test_inher1", "test_incompat_types2",
-            "test_invalid_set", "test_return_null_void", "test_void_return",
-            "test_invalid_field", "test_func_call_bad_args", "test_dup_param",
-            "test_dup_local_var"
-        ],
-    )
+    # run all the tests inside the v2/tests and v2/fails directory
+    # code is from: https://github.com/onlypham/spring-23-tests/blob/main/tester.py
+    test_files = [
+        file.split(".")[0]
+        for file in os.listdir("v2/tests")
+        if file.split(".")[1] == "brewin"
+    ]
+    fail_files = [
+        file.split(".")[0]
+        for file in os.listdir("v2/fails")
+        if file.split(".")[1] == "brewin"
+    ]
+    return __generate_test_suite(2, test_files, fail_files)
+    # uncomment the following code if you want to run specific testcases
+    # return __generate_test_suite(
+    #     2,
+    #     [
+    #         "test_compare_null",
+    #         "test_return_default1",
+    #         "test_inher2",
+    #         "test_inher1",
+    #         "test_let",
+    #         # my tests
+    #         "test_static_field",
+    #         "test_set_field",
+    #         "test_simple_func",
+    #         "test_return_obj",
+    #         "test_return_null",
+    #         "test_void",
+    #         "test_nested_let",
+    #         "test_super",
+    #         "test_overload_func",
+    #         "test_linked_list"
+    #     ],
+    #     [
+    #         "test_incompat_return1", "test_let2", "test_inher1", "test_incompat_types2",
+    #         "test_invalid_set", "test_return_null_void", "test_void_return",
+    #         "test_invalid_field", "test_func_call_bad_args", "test_dup_param",
+    #         "test_dup_local_var"
+    #     ],
+    # )
 
 
 def generate_test_suite_v3():
