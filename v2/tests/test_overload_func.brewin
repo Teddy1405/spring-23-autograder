@@ -1,0 +1,37 @@
+(class mammal
+    (field string species "human")
+    (method void print_info ((string habitat))
+        (print species " lives in " habitat)
+    )
+)
+
+(class person inherits mammal
+    (field int age 0)
+    (field string name "")
+    (method void print_info ()
+        (print "name: " name "age: " age)
+    )
+)
+(class student inherits person
+    (field int id 123)
+    (field string grade "A")
+    (method void print_info ((int key))
+        (if (== key id)
+            (print "student has grade: " grade)
+            (print "invalid student id")
+        )
+    )
+)
+
+(class main
+    (field student p null)
+    (method void main ()
+        (begin
+            (set p (new student))
+            (call p print_info)
+            (call p print_info 123)
+            (call p print_info 456)
+            (call p print_info "suburbs")
+        )
+    )
+)
