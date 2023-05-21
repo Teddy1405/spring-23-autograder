@@ -1,5 +1,9 @@
 # CS 131 Spring 2023 - Project Autograder
 
+This is forked from [the CS 131 repo](https://github.com/UCLA-CS-131/spring-23-autograder). I've added test cases to the v2 folder. To add your own test cases, make a new branch and submit a pull request. Please try to test your test cases through barista first and avoid naming your test cases the same name as the existing test cases.
+
+If any of the test cases are incorrect, feel free to submit a pull request editing it. I hope this helps everyone on their project!
+
 Hi there! This is a repo that contains an open-source subset of the autograder we'll be using for [CS 131 - Spring 2023](https://ucla-cs-131.github.io/spring-23/)'s course-long project: making an interpreter.
 
 Using this repository / testing locally is **entirely optional**. It does not directly affect your grade. **You are free to only submit to Gradescope!**
