@@ -1,0 +1,11 @@
+(class main
+    (field int x 0)
+    (method void main ()
+        (begin
+            (call me foo x 5)
+        )
+    )
+    (method void foo ((int a) (string s))
+        (print s a)
+    )
+)
